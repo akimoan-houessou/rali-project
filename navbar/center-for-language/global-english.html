@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAL Institute</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great Vibes">
+
+    <style>
+        #body {
+          margin: 0 60px 0 60px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .box{
+            display: flex;
+            background-color: rgb(227,6,19);
+            width: 100%;
+            height: 185px;            
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.85;
+        }
+        .box a {
+        text-decoration: none;
+        color: whitesmoke;
+
+      }
+        .stack-top{
+            width: 150px;
+            height: 150px;
+            z-index: -9;
+            margin-top: 15px;
+            margin-left: 70px; /* for demo purpose  */
+            opacity: 0.1;
+        }
+
+      #titre {
+        color: whitesmoke;
+        margin-top: 17px;
+        margin-left: 20px;
+        font-size: x-large;
+      }
+      .titre2 {
+        color: whitesmoke;
+
+      }
+       #logo {
+        margin-top: 15px;
+        margin-left: 120px;
+        width: 170px;
+        height: 150px;
+       }
+
+       #rali {
+        padding-top: 40px;
+        font-size: 25px;
+        color: whitesmoke;
+
+       }
+
+       .studyatessf {
+        display: inline-flex;
+        }
+
+        .studyatessf  .essfhomeabout {
+            list-style-type: none; 
+            margin-top: 50px;
+            margin-left: 15px;
+            font-size: xx-large;
+            row-gap: 15px;
+
+    }
+    
+    #home {
+                   color: whitesmoke;
+
+    }
+    #about {
+                   color: whitesmoke;
+
+    }
+    #essf {
+                   color: whitesmoke;
+
+    } 
+
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+
+
+#searchicon {
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        margin-top: 60px;
+        margin-left: 1130px;
+    } 
+
+
+    #signicon {
+        margin-top: 65px;
+        margin-left: 35px;
+        color: white;
+        
+    }
+   
+   #languageicon {
+    color: white;
+   } 
+
+
+
+/* design du bouton de langue*/
+.switch {
+  position: absolute;
+  display: inline-block;
+  margin-left: 1200px;
+  margin-top: 60px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 10px;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+/*inside the second button*/
+input.check-toggle-round-flat:checked ~ .off {
+  color: #555;
+}
+/* first button when off*/
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+/*inside the fisrt button*/
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #555;
+}
+/*second button when off*/
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: black;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: black;
+  -webkit--moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+/*cursor when on second button */
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
+    .openBtn {
+    background: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.openBtn:hover {
+    background: #bbb;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    opacity: 2;
+}
+
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background: #bbb;
+}
+.SearchHero{
+  background: #333333;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ffffff;
+  padding: 20px;
+}
+.SearchHero p{
+  font-size: 13px;
+}
+  
+        /* design du reste de la page */
+        
+       /* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+
+  color: black;
+  
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  background-color: #555;
+}
+
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #555;
+}
+active2 {
+  background-color: #5241;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: block;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+} 
+
+/*pied de page */
+.underline {
+            padding-bottom: 1px;
+            border-bottom: 1px solid #333;
+        }
+        
+        #footer{
+            height: auto;
+            width: 100%;
+        }
+         
+        .footer-menu{
+            display: flex;
+            list-style: none;
+        }
+
+        .liste{
+            padding: 12px;
+            margin: 10px;
+            border-right: 1px solid #d9d9d9;
+        }
+        #grostitre {
+            list-style-type: disc;
+        }
+        #insta {
+            color: #333;
+        }
+        #twit {
+            color: #333;
+        }
+        #face {
+            color: #333;
+        }
+        #yout {
+            color: #333;
+        }
+        #what {
+            color: #333;
+        }
+        .wrapper .icon a {
+            color: #333333;
+        }
+.social {
+  background: #333333;
+  background: linear-gradient(315deg, #ffffff #d7elec);
+  display: grid;
+  place-items: center;
+  height: 200px;
+  font-family: "Poppins", sans-serif;
+}
+*:focus,*:active{
+    outline:none ! important;
+    -webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+    display: inline-flex;
+    list-style-type: none;
+}
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:0 10px  10px rgba(0,0,0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow:0 10px  10px rgba(0,0,0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.wrapper .tooltip::before {
+    position:absolute;
+    content: **;
+    height: 8px;
+    width: 8px; 
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.wrappper .icon:hover span,
+.wrappper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrappper .facebook:hover .tooltip, 
+.wrappper .facebook:hover .tooltip::before {
+    background-color: #1877F2;
+    color: #ffffff;
+}
+.wrapper .twitter:hover,
+.wrappper .twitter:hover .tooltip, 
+.wrappper .twitter:hover .tooltip::before {
+    background-color: #1DA1F2;
+    color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrappper .instagram:hover .tooltip, 
+.wrappper .instagram:hover .tooltip::before {
+    background-color: #E4405F;
+    color: #ffffff;
+}
+.wrapper .youtube:hover,
+.wrappper .youtube:hover .tooltip, 
+.wrappper .youtube:hover .tooltip::before {
+    background-color: #CD201F;
+    color: #ffffff;
+}
+.wrapper .whatsapp:hover,
+.wrappper .whatsapp:hover .tooltip, 
+.wrappper .whatsapp:hover .tooltip::before {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+#signup {
+    color: black;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+
+.search-input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 15px 45px 15px 15px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border:none;
+  transition: all .4s;
+}
+
+.search-input:focus {
+  border:none;
+  outline:none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left:-45px;
+  border:none;
+  color: black;
+  transition: all .4s;
+  z-index: 10;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+.search-btn:focus {
+  outline:none;
+  color:black;
+}
+
+.liste a {
+color: #000;
+}
+.liste a:hover {
+color: blue;
+}
+
+#wrapper {
+    margin-top: 20px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    
+}
+#first {
+    width: 100%;
+    padding-left: 30px;
+    color: whitesmoke;
+}
+#second {
+
+}
+.dropdown {
+  list-style-type: none;
+}
+ul li ul.dropdown {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+ul li ul.dropdown li {
+display: block;
+}
+ul li a:hover {
+
+}
+ul li:hover ul.dropdown {
+  display: block;
+}
+.menu {
+  display: flex;
+            list-style: none;
+            padding-left: 0px;
+}
+.menu li a {
+  text-decoration: none;
+            padding-left: 20px;
+            padding-right: 30px;
+            border-right: 1px solid #d9d9d9;
+}
+.footer-menu{
+            display: flex;
+            list-style: none;
+            padding-left: 0px;
+        }
+        .footer-menu li a {
+          color: white;
+          text-decoration: none;
+            padding-left: 20px;
+            padding-right: 30px;
+            border-right: 1px solid #d9d9d9;  
+        }
+        #publications {border: none;}
+
+        /*card*/
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 20px 20px;
+  height: auto;
+}
+
+.journey {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  column-gap: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.journey:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.journey1 {
+  padding: 7px;
+}
+.journey1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.englishtransform {
+  background-color: #faf6f6;
+}
+
+.discover {
+  display: flex; 
+  column-gap: 150px;
+}
+#discover1 {
+  display: flex; 
+  column-gap: 238px;
+}
+
+/* Banner */
+.header {
+  padding: 3px;
+  background: #59bdf7;
+  color: white;
+  height: 200px;
+}
+#globalenglish {
+  font-size: 30px;
+  padding-top: 8px;
+}
+#join {
+margin-left: 600px;
+padding-bottom: 3px;
+}
+.buttonjoin {
+  background-color: rgb(39, 37, 37);
+  border: none;
+  border-radius:15px;
+  color: white;
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+#nearnative {
+  font-family: "Great Vibes", sans-serif;
+  font-size: 40px;
+}
+#nearnative {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.writing {
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+.reading {
+  padding-left: 25px;
+  padding-top: 15px;
+}
+.reading ul {
+  list-style-image: linear-gradient(to left bottom, red, blue);
+}
+.reading ul li {
+  padding: 5px;
+}
+
+.entrytest {
+  display: flex;
+  gap: 0.5rem;
+}
+.entrytest a {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.entrytest a:hover,
+.entrytest a:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #333;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+.favorite {
+  float: right;
+}
+#favorite {
+  padding-right: 30px;
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+        </style>
+
+
+        <script>
+            function openSearchHero() {
+                document.getElementById("FullScreenOverlay").style.display = "block";
+            }    
+                </script>
+            
+                <script>
+                    function closeSearchHero() {
+                document.getElementById("FullScreenOverlay").style.display = "none";
+            }
+                </script>
+        
+ </head>
+ <body>
+    
+    
+      <div class="box" >
+        <h5 id="titre"><a href="#" ><span class="titre2">ECOLE</span><br><span class="titre2">SUPERIEURE</span><br> <span class="titre2">SAINTE</span><br> <span class="titre2">FELICITE</span><br><span class="titre2">(ESSF)</span></a></h5>
+        <img  src="C:\Users\Josué\Desktop\RALI\images/ral2logo.png" alt="" id="logo" >
+        <p id="rali">Research, Arts & <br> Language Institute </p>
+
+        <ul class="studyatessf">
+            <li class="essfhomeabout" id="home">
+                <a href="#" style="text-decoration:none;">Home</a>
+            </li>
+            <li class="essfhomeabout" id="about">
+                <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/about.html" style="text-decoration:none;">About</a>
+            </li>
+            <li class="essfhomeabout" id="essf">
+                <a href="file:///C:/Users/Josu%C3%A9/Desktop/ral%20-%20Copie/studyatessf.html#" style="text-decoration:none; " >Study at ESSF </a>
+            </li>
+        </ul>
+        <!--
+        <div >
+            <input class="search-input" type="text" placeholder="Search ..">
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+          </div>
+          -->
+          <span class="material-symbols-outlined" class="search-box" class="openBtn" id="searchicon" onclick="openSearchHero()">
+            search
+            </span>
+          <!--
+            <div class="endheader">
+            <p style="margin-top: 65px; margin-left: 25px; font-size: 15px;">Language</p>
+       </div>
+          -->
+          
+       <div class="switch">
+        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+        <label for="language-toggle"></label>
+        <span class="on">EN</span>
+        <span class="off">FR</span>
+      </div>
+
+
+<div id="FullScreenOverlay" class="overlay">
+    <span class="closebtn" onclick="closeSearchHero()" title="Close Overlay">×</span>
+    <div class="overlay-content">
+        <form action="">
+         <input type="text" placeholder="Search" name="search">
+      </form>
+    </div>
+  </div>
+
+
+    </div>
+        <img class="stack-top" src="C:\Users\Josué\Desktop\RALI\images/essflogo.jpg" alt="">
+
+        <div id="wrapper">
+            <div id="first">
+                <h3 style="font-family: Arial, Helvetica, sans-serif;">LANGUAGE CENTER</h3>
+                <div id="second">
+                    <ul class="footer-menu" style="";>
+                        <li><h6><a class="active2" href="">Center For English Teaching </a></h6></li>
+                        <li><h6><a href="">Center For French Teaching</a></h6></li>
+                        <li><h6><a href="">Center For Translation & Interpretation</a></h6></li>
+                        <li><h6><a href="">Our Multimedia Library Resources</a></h6></li>
+                        <li><h6><a id="publications" href="">Publications</a></h6></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+
+        <!--reste de la page de la barre de navigation jusqu'à la fin-->
+          <div id="body">
+            <div class="row">
+              <div class="col-md-3">
+                   <!-- The side navigation menu -->  
+                   <div class="sidenav">
+                    <a href="#about">Home</a>
+                    <div style="height: 2px;width: auto;border: 0.5px solid black;"></div>
+                    <a href="#services">Center For English Teaching</a>
+                    <div style="height: 2px;width: auto;border: 0.5px solid black;"></div>
+                    <button class="dropdown-btn active" >Learning Courses 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div style="height: 2px;width: auto;border: 0.5px solid black;"></div>
+                    <div class="dropdown-container">
+                      <a href="#">Global English</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">Academic English</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">Professional/Occupational English</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">UN Agency Worker</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">English Proficiency Summer Training</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">Customized Programs</a>
+                      <div style="height: 1px;width: auto;border: 0.1px solid grey;"></div>
+                      <a href="#">Intensive Test Preparation</a>
+                    </div>
+                    <div style="height: 2px;width: auto;border: 0.5px solid black;"></div>
+                    <button class="dropdown-btn active" >Teaching Courses 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <a href="#contact">Test Center</a>
+                  </div>          
+                    
+              </div>
+              <div class="col-md-8">
+
+                <div class="header">
+                  <h1 id="globalenglish">Global English</h1>
+                  <span id="nearnative">Become a near-native speaker with American or British accent</span>  
+                  <div id="favorite">
+                    <button class="favorite styled" type="button">
+                      Join now!
+                    </button> 
+                  </div>
+                                 
+                </div>  
+                <br>  <br>
+
+                <div class="englishtransform card">
+                  <div class="container">
+                   <center><h4><b>WHO IS THIS COURSE FOR?</b></h4></center>  
+                    <p>
+                      Our Global English course is designed for junior and adult learners who would like to widen their skills and develop a good command of English.
+                    You are also in the right place if you start from scratch.
+                    </p> 
+                  </div>
+                </div> <br>  <br>
+
+
+                <div class="card">
+                  <div class="container">
+                   <center><h4><b>WHAT IS THIS COURSE ABOUT?</b></h4></center>  
+                    <p>
+                      <ul style="list-style-type: square;">
+                        <li style="padding: 3px;">Methodical language education focusing on linguistic (listening, reading, speaking and writing) competences, interactive communication and discourse types</li>
+                        <li style="padding: 3px;">Effective communication strategies and techniques for different situations, settings and audiences</li>
+                        <li style="padding: 3px;">Integrated 21st-century information, technology, creativity, critical thinking, and problem-solving skills into language instruction</li>
+                        <li>Potential completion of 3 CEFR levels in just 12 months with our year-round program</li>
+                      </ul>
+                    </p> 
+                  </div>
+                </div> <br>  <br>
+
+                <div class="englishtransform card">
+                 
+                  <center><h4 style="padding-top: 5px; padding-left: 5px;" ><b>HOW CAN OUR COURSE TRANSFORM YOUR ENGLISH SKILLS?</b></h4>
+                  </center>
+                    <div style="display: flex;">
+                      <p>
+                        <ul style="list-style-type: square;">
+                          <li style="padding: 3px;">We pinpoint your English language problems</li>
+                          <li style="padding: 3px;">We provide reasearch-based solutions</li>
+                          <li>We boost your vocabulary and grammar</li>
+                        </ul>
+                      </p>
+                      <p>
+                        <ul style="list-style-type: square;">
+                          <li style="padding: 3px;">We spot your mistakes and needs</li>
+                          <li style="padding: 3px;">We littearally upgrade your pronunciation</li>
+                          <li>We help you create and install English language habits</li>
+                        </ul>
+                      </p>
+                    </div>
+                    
+                </div>  <br>  <br>
+
+                <div >
+                   <h4><b>DISCOVER WHAT YOU WILL LEARN IN OUR DYNAMIC CLASSES!</b></h4> <br>
+                    <div class="discover" >
+                      <div class="reading">
+                        <h6><b>WRITING</b></h6>
+                        <ul>
+                          <li>Sentence Structure</li>
+                          <li>Paragraph Writing</li>
+                          <li>Essay, Email, Report, Presentation...</li>
+                        </ul>
+                      </div>
+                      <div class="writing">
+                        <img src="C:\Users\Josué\Desktop\RALI\images/writing.jpg" alt="" width="125px" height="125px">
+                      </div>
+                    </div> 
+
+                    <div class="discover" id="discover1" style="">
+                      <div class="writing">
+                        <img src="C:\Users\Josué\Desktop\RALI\images/listening.jpg" alt="" width="125px" height="125px">
+                      </div>
+                      <div class="reading">
+                        <h6><b>LISTENING</b></h6>
+                        <ul>
+                          <li>Listening Techniques and Strategies</li>
+                          <li>Intensive Listening Practices</li>
+                          <li>Note-taking and Dictation</li>
+                        </ul>
+                      </div>
+                    </div> 
+
+                    <div class="discover" id="discover1" style="">
+                      <div class="reading">
+                        <h6><b>READING</b></h6>
+                        <ul>
+                          <li>Reading Techniques and Strategies</li>
+                          <li>Reading faster, Reading Comprehension</li>
+                          <li>Reading for Pleasure</li>
+                        </ul>
+                      </div>
+                      <div class="writing">
+                        <img src="C:\Users\Josué\Desktop\RALI\images/reading.jpg" alt="" width="125px" height="125px">
+                      </div>
+                    </div> 
+
+                    <div class="discover" id="discover1" style="">
+                      <div class="reading">
+                        <div class="writing">
+                          <img src="C:\Users\Josué\Desktop\RALI\images/speaking.jpg" alt="" width="125px" height="125px">
+                        </div>
+                      </div>
+                      <div class="reading">
+                        <h6><b>SPEAKING</b></h6>
+                        <ul>
+                          <li>English Sounds & Pronunciation</li>
+                          <li>Rythm & Accent</li>
+                          <li>Fluent Conversation</li>
+                        </ul>
+                      </div>
+                    </div> 
+
+
+
+                </div> <br>  <br>
+
+                <div class="journey">
+                  <div>
+                    <img src="C:\Users\Josué\Desktop\RALI\images\englishjourney.jpg" alt="journey" width="300px" height="100%">
+                  </div>
+                  <div class="journey1">
+                    <center><h4><b>HOW IS THE COURSE STRUCTURED?</b></h4></center>  
+                    <p>
+                      The Global English is a 300-hour program that combines evening and day-time classes to run over 14 weeks with: <br>
+                        <ul>
+                          <li>108 hours of in-class courses</li>
+                          <li>32 hours of practical work in class</li>
+                          <li>150 hours of student’s personal practice and homework</li>
+                          <li>10 hours of educational outing/Intercation with a guest</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>  <br>  <br>
+
+                   <h4><b>THE CLASSES WE TEACH, THE EXAMS YOU CAN TAKE!</b></h4>
+                <P>Our Global English program instills in you the "CAN-DOs" of each CEFR level and prepares you for the Cambridge English
+                  Qualifications, IELTS and TOEFL.
+                </P>
+                <div class="entrytest">
+                  <a href="#"><b>Level A1</b> <br> Cambridge English Qualification: <b>Movers</b>  </a>
+                  <a href="#"><b>Level A2</b> <br> Cambridge English Qualification: <b>Flyers</b> </a>
+                </div> <br>
+                <div class="entrytest">
+                  <a href="#"><b>Level B1</b> <br> Cambridge English Qualification: <b>Preliminary</b>  </a>
+                  <a href="#"><b>Level B2</b> <br> Cambridge English Qualification: First <br> IELTS & TOEFL </a>
+                </div> <br>
+                <div class="entrytest">
+                  <a href="#"><b>Level C1</b> <br> Cambridge English Qualification: <b>Advanced</b>  <br> IELTS & TOEFL </a>
+                  <a href="#"><b>Level C2</b> <br> Cambridge English Qualification: <b>Proficiency</b> <br> IELTS & TOEFL </a>
+                </div>  <br>
+
+                <center>
+                  <button class="favorite styled" type="button">
+                        Test your English now!
+                  </button>
+                </center> <br> <br> <br>
+
+                <div class="journey">
+                  <div>
+                    <img src="C:\Users\Josué\Desktop\RALI\images\certification.jpg" alt="journey" width="300px" height="100%">
+                  </div>
+                  <div class="journey1">
+                    <center><h4><b>CERTIFICATIONS</b></h4></center>  
+                    <p>
+                      Upon completion of each class level, you will receive:
+                      <ul >
+                        <li>our Certificate for the completed level</li>
+
+                        <li>an ITTT-signed Certificate, internationally accredited</li>
+                        <li>
+                          you will be able to take the Cambridge English Qualification exams like CPE, CAE, FCE, PET and KET.
+                        </li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>  <br>  <br>
+
+                <h4><b>TESTIMONIALS</b></h4>
+                <p>Read what our alumni say.</p>
+                <div style="display: flex; column-gap: 20px;">
+                  <div style="height: auto; width: 250px;">
+                    <img src="C:\Users\Josué\Desktop\RALI\images/briyanne.jpeg" alt="" height="200px"  width="250p"> <br> <br>
+                    <b>Briyanne, Student, Benin</b>
+                    <div style="height: 2px; border: 1px solid black;"></div>
+                    <div style="width: 100%; height: auto;">
+                      <p>RAL Institute's training helped me a lot. I got better at writing and pronunciation. The working environment was great and the 
+                        trainers were very passionate about their work and would constantly check on everyone's understanding and provide support whenever asked for. If you wish to take 
+                        a methodical, well-structured and effective English course I strongly recommend this Institute.
+                      </p>
+                    </div>
+                  </div>
+                  <div style="height: auto; width: 250px;">
+                    <img src="C:\Users\Josué\Desktop\RALI\images/chimene.jpg" alt="" height="200px"  width="250p"> <br> <br>
+                    <b>Chimène, Student, Japan</b>
+                    <div style="height: 2px; border: 1px solid black;"></div>
+                    <div style="width: 100%; height: auto;">
+                      <p>I had a very low level in English when I started my training at RAL Institute. I went to them because I had a scholarship opportunity for Japan
+                         and the main condition was to speak and write in English. In six months of diligent training, through dialogues, videos, songs, courses and practicle
+                         exercises that I applied myself to, I got admission into the program after an interview because I was able to defend my thesis topic.
+                         Today, I'm in Japan. I follow courses and seminars in English with ease thanks to the training. At first, I did not believe it would work, but following instructions and applying myself
+                         proved effective.
+                      </p>
+                    </div>
+                  </div>
+                  <div style="height: auto; width: 250px;">
+                    <img src="C:\Users\Josué\Desktop\RALI\images/germany.jpg" alt="" height="200px"  width="250p"> <br> <br>
+                    <b>Osias, Student, Germany</b>
+                    <div style="height: 2px; border: 1px solid black;"></div>
+                    <div style="width: 100%; height: auto;">
+                      <p>
+                        Before starting the training at RAL Institute, I thought English was only needed for studying or finding a job. My journey to Germany completely changed my perception. On planes, at train stations, in airport lounges, with friends, in the news etc 
+                        English is everywhere. I am now truly thankful for what RAL Institute's English classes offer. They took us through various situations and taught us effective communication
+                        over a short period of time. 
+                                       </p>
+                    </div>
+                  </div>
+              </div>
+
+             
+
+              </div>
+
+
+
+
+
+
+
+              <div class="col-md-1">
+                  <div>
+  
+                  </div>
+              </div>
+            </div> 
+  
+          </div>
+<br> <br>
+          <div class="social" >
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <span class="tooltip" id="face">Facebook</span>
+                    <a href="https://web.facebook.com/"><span><i class="fa fa-facebook"></i>
+                    </span></a>
+                </li>
+                <li class="icon twitter">
+                    <span class="tooltip" id="twit">Twitter</span>
+                    <a href="https://twitter.com/?lang=fr"><span><i class="fa fa-twitter"></i>
+                    </span></a>
+                </li>
+                <li class="icon instagram">
+                    <span class="tooltip" id="insta">Instagram</span>
+                    <a href="https://www.instagram.com/?hl=fr"><span><i class="fa fa-instagram"></i>
+                    </span></a>
+                </li>
+                <li class="icon youtube">
+                    <span class="tooltip" id="yout">Youtube</span>
+                    <a href="https://www.youtube.com/"><span><i class="fa fa-youtube"></i>
+                    </span></a>
+                </li>
+                <li class="icon whatsapp">
+                    <span class="tooltip" id="what">Whatsapp</span>
+                    <a href=""><span><i class="fa fa-whatsapp"></i>
+                    </span></a>
+                </li>
+            </ul>
+            <div><button class="button button5"><a target="_self" id="signup" href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/signup.html">Sign up</a></button>
+            </div>
+        </div>
+        <div id="footer">
+            <ul class="menu">
+                <li class="liste"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/privacypolicy.html">Privacy Policy</a></li>
+                <li class="liste"><a href="">Terms & Conditions</a></li>
+                <li class="liste">About Us </li>
+                <li class="liste">About Us </li>
+                <li class="liste">About Us </li>
+                <li class="liste">About Us </li>
+                <li class="liste">About Us </li>
+            </ul>
+        </div>
+    
+       
+
+    
+    
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ </body>
+ </html>

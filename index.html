@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAL Institute</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        #body {
+            margin-left: 20px;
+            margin-right: 20px;
+            h1, h2, h3, h4, h5, h6, p {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+            } 
+        }
+
+        .box{
+            display: flex;
+            background-color: rgb(227,6,19);
+            width: 100%;
+            height: 185px;            
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.85;
+        }
+        .box a {
+        text-decoration: none;
+        color: whitesmoke;
+
+      }
+        .stack-top{
+            width: 150px;
+            height: 150px;
+            z-index: -9;
+            margin-top: 15px;
+            margin-left: 70px; /* for demo purpose  */
+            opacity: 0.1;
+        }
+
+      #titre {
+        color: whitesmoke;
+        margin-top: 17px;
+        margin-left: 20px;
+        font-size: x-large;
+      }
+      .titre2 {
+        color: whitesmoke;
+
+      }
+       #logo {
+        margin-top: 15px;
+        margin-left: 120px;
+        width: 170px;
+        height: 150px;
+       }
+
+       #rali {
+        padding-top: 40px;
+        font-size: 25px;
+        color: whitesmoke;
+
+       }
+
+       .studyatessf {
+        display: inline-flex;
+        }
+
+        .studyatessf  .essfhomeabout {
+            list-style-type: none; 
+            margin-top: 50px;
+            margin-left: 15px;
+            font-size: xx-large;
+            row-gap: 15px;
+
+    }
+    
+    #home {
+                   color: whitesmoke;
+
+    }
+    #about {
+                   color: whitesmoke;
+
+    }
+    #essf {
+                   color: whitesmoke;
+
+    } 
+
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+
+    /* styling the search bar */
+/*
+.search-box {
+  width: 250px;
+  position: absolute;
+  display: flex;
+  margin-bottom: 70px;
+  margin-top: 50px;
+       margin-left: 960px;
+} */
+
+#searchicon {
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        margin-top: 60px;
+        margin-left: 1130px;
+    } 
+
+
+    #signicon {
+        margin-top: 65px;
+        margin-left: 35px;
+        color: white;
+        
+    }
+   
+   #languageicon {
+    color: white;
+   } 
+
+/*
+   .endheader{
+    display: inline-flex;
+    height: fit-content;
+ 
+    padding: 2px;
+    
+}
+*/
+
+/* design du bouton de langue*/
+.switch {
+  position: absolute;
+  display: inline-block;
+  margin-left: 1200px;
+  margin-top: 60px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 10px;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+/*inside the second button*/
+input.check-toggle-round-flat:checked ~ .off {
+  color: #555;
+}
+/* first button when off*/
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+/*inside the fisrt button*/
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #555;
+}
+/*second button when off*/
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: black;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: black;
+  -webkit--moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+/*cursor when on second button */
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
+    .openBtn {
+    background: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.openBtn:hover {
+    background: #bbb;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    opacity: 2;
+}
+
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background: #bbb;
+}
+.SearchHero{
+  background: #333333;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ffffff;
+  padding: 20px;
+}
+.SearchHero p{
+  font-size: 13px;
+}
+    
+
+    
+
+        /* design du reste de la page */
+        .navlist {
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: auto;
+            list-style-type: none;
+            display: inline-flex;
+            background-color: rgb(82, 113, 180)33;
+            height: 20px;
+        }
+      
+    a{
+        text-decoration: none;
+        
+    }
+        #main{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+            padding: 5px;
+        }
+
+        section{
+            width: 65%;
+            height: 700px;
+        }
+        #right{
+            width: 25%;
+            border-left: 0.25px solid grey;
+            padding: 5px;
+        }
+        #sub-section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            column-gap: 15px;
+        }
+
+        #sub-section-2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            column-gap: 15px;
+
+        }
+        .articleprincipal{
+            width: 60%;
+            height: 280px;
+         
+        }
+        
+        #pararticle {
+            width: 37%;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+
+        #firstpara {
+            width: 70%;
+            height: 280px;
+        }
+        #firstpara a {
+            color: #000;
+        }
+        #firstpara a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+        #card-body-2 a {
+            color: #000;
+                  }
+        #card-body-2 a:hover {
+            color: green;
+            text-decoration: underline; 
+        }
+        #card-body-3 a {
+            color: #000;
+                  }
+        #card-body-3 a:hover {
+            color: green;
+            text-decoration: underline; 
+        }
+        
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        #article-2{
+           
+            width: 20%;
+        }   
+        
+        .ronaldo{
+            border-style: none;
+        }
+
+        #section-2{
+            width: 50%;
+            height: inherit;
+            
+        }
+
+        #tertiaire {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 15px;
+        }
+
+        #article-3 {
+            width: 70%;
+            height: auto;
+            
+        }
+
+        #article-4 {
+            width: 70%;
+            height: auto;
+           
+        }
+        .vid {
+            width: 60%;
+            height: auto;
+         
+        }
+        #video{
+            width: 100%;
+            height: 300px;
+        }
+
+        #secondpara {
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        #imgtertiaire {
+            vertical-align: middle;
+            width: 93%;
+            height: 68%;
+        }      
+
+
+        .card-2{
+            margin-left: 30px;
+        }
+
+        #entete {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+            padding: 5px;
+           
+        }
+
+        .img-fluid {
+            padding-left: 2em;
+        }
+
+
+        h4 {
+            margin-left: 5px;
+        }
+       
+        #cards3 {
+            align-items: stretch;
+            padding: auto;
+        }
+
+        #featured{
+            width: 100%;
+            height: auto;
+            
+        }
+
+        #flex{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .flexchild {
+            border: 1px solid grey; 
+            height: 260px; 
+            width: 600px; 
+            display: flex; 
+            column-gap: 10px;
+        }
+
+        #threecards {
+        display:grid;
+        grid-template-columns:33% 33% 33% ;
+        justify-content: space-between;
+        
+        }
+
+        .featured-card{
+            width: 429px;
+            height: 300px;
+        }
+
+        .textconf{
+            padding: 10px;
+            margin: 10px;
+        }
+        .confcard{
+            border: solid 1px gray;
+            height: 275px;
+            margin: 10px;
+        }
+
+        .carousel{
+            width: auto;
+            height: auto;
+        }
+
+        
+        .sub-title{
+            color: gray;
+        }
+
+        .float{
+            width: 80px;
+            height: 50px;
+            position:relative;
+            left: 50px;
+            bottom: 40px;
+        }
+
+        .underline {
+            padding-bottom: 1px;
+            border-bottom: 1px solid #333;
+        }
+        
+        #footer{
+            height: auto;
+            width: 100%;
+        }
+         
+        .footer-menu{
+            display: flex;
+            list-style: none;
+        }
+
+        .liste{
+            padding: 12px;
+            margin: 10px;
+            border-right: 1px solid #d9d9d9;
+        }
+        #grostitre {
+            list-style-type: disc;
+        }
+        #insta {
+            color: #333;
+        }
+        #twit {
+            color: #333;
+        }
+        #face {
+            color: #333;
+        }
+        #yout {
+            color: #333;
+        }
+        #what {
+            color: #333;
+        }
+        .wrapper .icon a {
+            color: #333333;
+        }
+.social {
+  background: #333333;
+  background: linear-gradient(315deg, #ffffff #d7elec);
+  display: grid;
+  place-items: center;
+  height: 200px;
+  font-family: "Poppins", sans-serif;
+}
+*:focus,*:active{
+    outline:none ! important;
+    -webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+    display: inline-flex;
+    list-style-type: none;
+}
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:0 10px  10px rgba(0,0,0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow:0 10px  10px rgba(0,0,0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.wrapper .tooltip::before {
+    position:absolute;
+    content: **;
+    height: 8px;
+    width: 8px; 
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.wrappper .icon:hover span,
+.wrappper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrappper .facebook:hover .tooltip, 
+.wrappper .facebook:hover .tooltip::before {
+    background-color: #1877F2;
+    color: #ffffff;
+}
+.wrapper .twitter:hover,
+.wrappper .twitter:hover .tooltip, 
+.wrappper .twitter:hover .tooltip::before {
+    background-color: #1DA1F2;
+    color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrappper .instagram:hover .tooltip, 
+.wrappper .instagram:hover .tooltip::before {
+    background-color: #E4405F;
+    color: #ffffff;
+}
+.wrapper .youtube:hover,
+.wrappper .youtube:hover .tooltip, 
+.wrappper .youtube:hover .tooltip::before {
+    background-color: #CD201F;
+    color: #ffffff;
+}
+.wrapper .whatsapp:hover,
+.wrappper .whatsapp:hover .tooltip, 
+.wrappper .whatsapp:hover .tooltip::before {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+#signup {
+    color: black;
+}
+/*
+#menu-demo2, #menu-demo2 ul{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#menu-demo2 li{
+display:inline-block;
+position:relative;
+border-radius:8px 8px 0 0;
+}
+#menu-demo2 ul li{
+display:inherit;
+border-radius:0;
+}
+#menu-demo2 ul li:hover{
+border-radius:0;
+}
+#menu-demo2 ul li:last-child{
+border-radius:0 0 8px 8px;
+}
+#menu-demo2 ul{
+position:absolute;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+#menu-demo2 li:hover ul{
+max-height:15em;
+}
+/* background des liens menus */
+/*
+#menu-demo2 li:first-child{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:nth-child(2){
+    background-color: rgb(82, 113, 180)33;
+
+}
+#menu-demo2 li:nth-child(3){
+    background-color: rgb(82, 113, 180)33;
+
+}
+#menu-demo2 li:last-child{
+    background-color: rgb(82, 113, 180)33;
+
+}
+/* background des liens sous menus */
+/*
+#menu-demo2 li:first-child li{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:nth-child(2) li{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:nth-child(3) li{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:last-child li{
+    background-color: rgb(82, 113, 180)33;
+}
+/* background des liens menus et sous menus au survol */
+/*
+#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
+    background-color: rgb(82, 113, 180)33;
+}
+#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
+    background-color: rgb(82, 113, 180)33;
+}
+/* les a href */
+/*
+#menu-demo2 a{
+text-decoration:none;
+display:block;
+padding:8px 70px;
+color:#fff;
+font-family:arial;
+}
+#menu-demo2 ul a{
+padding:8px 0;
+}
+#menu-demo2 li:hover li a{
+color:#fff;
+text-transform:inherit;
+}
+#menu-demo2 li:hover a, #menu-demo2 li li:hover a{
+color:#000;
+}
+#navbar {
+    justify-content: center;
+}
+*/
+        /* MISE EN FORME GENERALE */
+
+nav#menu.menu a {display:block;padding:1em;text-decoration:none;color:whitesmoke;border:none;font-family:Arial;font-size: large;}
+nav#menu.menu a:hover {background:black;}
+.menubtn {display:none;}
+nav#menu.menu ul  {list-style-type:none;padding:0;margin:0;z-index:99;background:black;}
+nav#menu.menu ul li {list-style-type:none;padding:0;margin:0;z-index:99;background:black;}
+nav#menu.menu > ul > li > a {text-transform:uppercase; color: whitesmoke;}
+
+/* AFFICHAGE SUR ECRAN > 501 PX DE LARGE */
+
+@media screen and (min-width : 501px){
+nav#menu.menu .parent {position:relative;}
+nav#menu.menu > ul > li {display:inline-block;}
+nav#menu.menu > ul {text-align:center;}
+.sousrubrique{visibility:hidden;position:absolute;top:100%;min-width:160px;left:0;z-index:-1;background:#FFF;opacity:0;text-align:left;transform:translateY(-2em);transition:all .3s ease-in-out 0s,visibility 0s linear .3s,z-index 0s linear 10ms;-moz-box-shadow:3px 3px 5px 0 #656565;-webkit-box-shadow:3px 3px 5px 0 #656565;-o-box-shadow:3px 3px 5px 0 #656565;box-shadow:3px 3px 5px 0 #656565;filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5)}
+nav#menu.menu > ul > li > ul > li {float:none;}
+nav#menu.menu ul,nav#menu.menu ul li {overflow:visible;}
+nav#menu.menu ul li:hover .sousrubrique{visibility:visible;opacity:1;z-index:1;transform:translateY(0);transition-delay:0s,0s,.3s}
+}
+
+/* AFFICHAGE SUR PETIT ECRAN */
+@media screen and (max-width : 500px){
+a.menubtn {display: inline-block;position: relative;padding: 0.5em 1.9em;text-decoration:none;color:#000;margin-top: 1em;border-radius: 3px;border: 1px solid #CCC;background: #FFE49F;}
+.menubtn:before{content: "";position: absolute;left: 0.5em;top: 0.75em;width: 1em;height: 0.15em;background: black;box-shadow: 0 0.35em 0 0 black,0 0.7em 0 0 black;}
+nav#menu.menu ul,nav#menu.menu ul li {list-style-type:none;padding:0;margin:0;text-transform:uppercase;}
+nav#menu.menu > ul {margin-top:10px;}
+.js nav#menu.menu, .js nav#menu.menu > ul ul {overflow: hidden;max-height: 0;transition: all 0.3s ease-out;}
+nav#menu.menu.select, .js nav#menu.menu > ul ul.select {max-height: 55em;}
+nav#menu.menu li a {color: #000;display: block;padding: 0.8em;border-bottom: 1px solid #EEE;position: relative;}
+nav#menu.menu li.sousmenu > a:after {content: '+';position: absolute;top: 0;right: 0;display: block;font-size: 1em;padding: 0.7em 0.5em;}
+nav#menu.menu li.sousmenu > a.select:after {content: "-";padding: 0.7em 0.5em;}
+nav#menu.menu li.sousmenu > ul li {padding-left:1em;text-transform:none;float:none;} 
+nav#menu.menu ul,nav#menu.menu ul li {overflow:visible;}
+nav#menu.menu > ul > li.parent {float:none;}
+nav#menu.menu ul.sousrubrique,nav#menu.menu ul{border-bottom: 0;}
+}
+
+.search-input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 15px 45px 15px 15px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border:none;
+  transition: all .4s;
+}
+
+.search-input:focus {
+  border:none;
+  outline:none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left:-45px;
+  border:none;
+  color: black;
+  transition: all .4s;
+  z-index: 10;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+.search-btn:focus {
+  outline:none;
+  color:black;
+}
+
+.liste a {
+color: #000;
+}
+.liste a:hover {
+color: blue;
+}
+        </style>
+        <script>
+            function openSearchHero() {
+                document.getElementById("FullScreenOverlay").style.display = "block";
+            }    
+                </script>
+            
+                <script>
+                    function closeSearchHero() {
+                document.getElementById("FullScreenOverlay").style.display = "none";
+            }
+                </script>
+        
+ </head>
+ <body>
+    
+    <div id="body">
+        <div class="box" >
+            <h5 id="titre"><a href="#" ><span class="titre2">ECOLE</span><br><span class="titre2">SUPERIEURE</span><br> <span class="titre2">SAINTE</span><br> <span class="titre2">FELICITE</span><br><span class="titre2">(ESSF)</span></a></h5>
+            <img  src="C:\Users\Josué\Desktop\RALI\images/ral2logo.png" alt="" id="logo" >
+            <p id="rali">Research, Arts & <br> Language Institute </p>
+
+            <ul class="studyatessf">
+                <li class="essfhomeabout" id="home">
+                    <a href="#" style="text-decoration:none;">Home</a>
+                </li>
+                <li class="essfhomeabout" id="about">
+                    <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/about.html" style="text-decoration:none;">About</a>
+                </li>
+                <li class="essfhomeabout" id="essf">
+                    <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/studyatessf.html" style="text-decoration:none; " >Study at ESSF </a>
+                </li>
+            </ul>
+            <!--
+            <div >
+                <input class="search-input" type="text" placeholder="Search ..">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+              </div>
+              -->
+              <span class="material-symbols-outlined" class="search-box" class="openBtn" id="searchicon" onclick="openSearchHero()">
+                search
+                </span>
+              <!--
+                <div class="endheader">
+                <p style="margin-top: 65px; margin-left: 25px; font-size: 15px;">Language</p>
+           </div>
+              -->
+              
+           <div class="switch">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">EN</span>
+            <span class="off">FR</span>
+          </div>
+    
+
+    <div id="FullScreenOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearchHero()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="">
+             <input type="text" placeholder="Search" name="search">
+          </form>
+        </div>
+      </div>
+
+
+        </div>
+            <img class="stack-top" src="C:\Users\Josué\Desktop\RALI\images/essflogo.jpg" alt=""> <br> <br>
+
+        <!--reste de la page de la barre de navigation jusqu'à la fin-->
+
+
+        <!--barre de navigation regroupant les gros titres-->
+           <div id="navbar">
+                  <a href="#menu" class="menubtn"></a>
+                  <nav id="menu" class="menu" role="navigation">
+                  <ul>
+                    <li class="parent sousmenu"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/navbar/languagecenter.html" target="_self">Language Center</a>
+                        <ul class="sousrubrique">
+                                <li><a href="(URL de la catégorie Sorties)">CENTER FOR ENGLISH TEACHING</a></li>
+                                <li><a href="(URL de la catégorie Déco)">CENTER FOR FRENCH TEACHING</a></li>
+                                <li><a href="(URL de la catégorie Mode/Beauté)">CENTER FOR TRANSLATION & INTERPRETATION</a></li>
+                                <li><a href="(URL de la catégorie Mode/Beauté)">OUR MULTIMEDIA LIBRARY RESOURCES</a></li>
+                                <li><a href="(URL de la catégorie Mode/Beauté)">PUBLICATIONS</a></li>
+                        </ul>
+                </li>
+                <li class="parent sousmenu"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/navbar/research.html">Research</a>
+                    <ul class="sousrubrique">
+                            <li><a href="(URL de la catégorie Sorties)">ABOUT OUR RESEARCH</a></li>
+                            <li><a href="(URL de la catégorie Déco)">RESEARCH FIELDS</a></li>
+                            <li><a href="(URL de la catégorie Mode/Beauté)">RESEARCH OUTPUT</a></li>
+                            <li><a href="(URL de la catégorie Mode/Beauté)">RESEARCH & PUBLISHING SERVICES</a></li>
+                            <li><a href="(URL de la catégorie Mode/Beauté)">COLLABORATION</a></li>
+                            <li><a href="(URL de la catégorie Mode/Beauté)">SUPPORT OUR RESEARCH PROGRAM</a></li>
+                    </ul>
+            </li>
+                  <li class="parent sousmenu"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/navbar/conferences.html">Conferences</a>
+                          <ul class="sousrubrique">
+                                  <li><a href="(URL de la catégorie Sorties)">SEMINARS</a></li>
+                                  <li><a href="(URL de la catégorie Déco)">CONFERENCES</a></li>
+                          </ul>
+                  </li>
+                  <li class="parent sousmenu"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/navbar/arts.html">Arts</a>
+                    <ul class="sousrubrique">
+                            <li><a href="(URL de la catégorie Sorties)">PHOTOS</a></li>
+                            <li><a href="(URL de la catégorie Sorties)">DOCUMENTARIES</a></li>
+                    </ul>
+            </li>
+            <li class="parent sousmenu"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/navbar/humancapital.html">Human Capital</a>
+                <ul class="sousrubrique">
+                        <li><a href="(URL de la catégorie Sorties)">ESSF SCHOLARSHIPS</a></li>
+                        <li><a href="(URL de la catégorie Déco)">SOLIDARITY SCHOLARSHIPS</a></li>
+                        <li><a href="(URL de la catégorie Mode/Beauté)">STATE SCHOLARSHIPS</a></li>
+                        <li><a href="(URL de la catégorie Mode/Beauté)">SCHOLARSHIPS ABROAD</a></li>
+                        <li><a href="(URL de la catégorie Mode/Beauté)">EDUCATE WOMEN</a></li>
+                </ul>
+        </li>
+                      </ul>
+                  </nav>
+                
+        </div>
+        
+        
+    <div id="main">
+    <!-- div contenant le reste de la page, de la première ligne des articles jusqu'en bas-->
+        <section>
+        <!--ensemble formé des articles, coté supérieur gauche de la div main-->
+            <div id="sub-section">
+            <!--div contenant la première ligne des articles (image principale, titre et article 2)-->
+
+            <!--image de l'article principale-->
+            <div class="articleprincipal">
+                <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-1.html"><img src="C:\Users\Josué\Desktop\RALI/DSC_3884.jpg" alt="..." style="height: 100%;"></a>    
+                </div>
+
+                <!--titre de l'article principal-->
+                <div id="pararticle">
+                    <div id="firstpara"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-1.html">
+                    <h5>Lucresse, a RAL Institute/ESSF raw-talent trainee schooling at Adjarra</h5>
+                </a>
+                <p>Some people are born with attitude, but others are born with good physical attributes. Some people are born with intelligence, but others are born with talent and grace.</p></div>
+                    <div id="article-2">
+                <!--article 2 -->
+                    <div class="ronaldo" class="card" style="width: 12rem";>
+                      <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-2.html"><img src="C:\Users\Josué\Desktop\RALI/DSC_3803.jpg" class="card-img-top" alt="..."></a>  
+                        <div id="card-body-2">
+                           <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-2.html"><h5 class="card-title">To the lost souls, a poem by Toyin-Dyva</h5></a> 
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div> <br>
+            <!--deuxième ligne de la section, contenant la vidéo et les articles 3 et 4-->
+                <h6>Our Language Center</h6>
+            <div id="sub-section">
+                <!--vidéo-->
+                <div class="vid">
+                    <video width="100%" height="100%" controls autoplay muted loop>
+                        <source src="C:\Users\Josué\Desktop\RALI\videos/gtc.mp4" type="video/mp4">
+                        <source src="C:\Users\Josué\Desktop\RALI\videos/gtc.ogg" type="video/ogg">
+                      Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="pararticle">
+                    <!--articles 3 et 4-->
+                    <div id="article-2">
+                        <!--article 3-->
+                        <div class="ronaldo" class="card" style="width: 12rem";>
+                           <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-3.html"><img src="C:\Users\Josué\Desktop\RALI/DSC_3806.jpg" class="card-img-top" alt="..."></a> 
+                            <div id="card-body-3">
+                               <a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/article-3.html"><h5 class="card-title">Toyin-Dyva AGBOTON, a poet of charm</h5></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div id="article-2">
+                        <!--article 4-->
+                        <div class="ronaldo" class="card" style="width: 12rem";>
+                            <img src="C:\Users\Josué\Desktop\RALI\images/tertiaire.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Ronaldo and Maguire, most abused players.</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+        </section>
+        <div id="right">
+            <!--coté supérieur droit contenant les trois cartes représentant des liens-->
+            <div id="cards3" style="padding: 5px;">
+                <div class="d-grid gap-3">
+                    <div  style="width: 18rem;">
+                        <!--the debate renvoyant vers -->
+                        <div >
+                          <img src="C:\Users\Josué\Desktop\RALI\images/pub1-copie.jpeg" alt="" >
+                          <p style="font-size: x-small;">See More</p>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <!--youtube renvoyant vers la chaine youtube de l'institut-->
+                        <div class="card-body">
+                          <h5 class="card-title">Support the RAL Institute</h5>
+                          <p class="card-text">The Research, Arts and Language Institute is a non-profit organization. <br>
+                            Consider supporting our mission by donating today.
+                          </p>
+                          <a href="#" class="card-link">Donate</a>
+                        </div>
+                      </div>
+                      <div  style="width: 18rem;">
+                        <!--mailing list renvoyant vers les mails-->
+                        <div >
+                            <img src="C:\Users\Josué\Desktop\RALI\images/pub2-copie.jpg" alt="">
+                            <p style="font-size: x-small;">See More</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+              
+            </div>
+        </div>
+
+        <div style="height: 0.1px;width: 25.8cm;border: 0.5px solid grey;"></div>
+
+      <h4 class="h4" style="text-decoration:underline;padding-left: 10px;">Conferences & Lectures</h4> 
+      <!--ligne de trois cartes à propos des conférences et séminaires -->
+        <div id="featured">
+            <div id="threecards">
+                <div class="confcard textconf">
+                    <p>Upcoming Lecture</p>
+                    <p>Topic:</p>
+                    <p>Date:</p>
+                    <p>Venue:</p>
+                    
+                </div>
+                <div class="confcard textconf">
+                    <p>Upcoming Conference</p>
+                    <p>Topic:</p>
+                    <p>Date:</p>
+                    <p>Venue:</p>
+                </div>
+                <div class="confcard">
+                    <div  class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/english.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/secondaire.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/tertiaire.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <p>Live Event</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, beatae! Deserunt dolores possimus odio quis, exercitationem ad tempora rerum, debitis quia libero molestiae perspiciatis aperiam. Consequatur maxime quos ipsa debitis.</p>
+                            </div>
+                        </div>
+                     </div>
+            </div>       
+        </div>
+
+        <h4 class="h4" style="text-decoration:underline;padding-left: 10px;">Arts, Entertainment & Culture</h4>   
+        <!--ligne de trois cartes à propos du département artistique-->
+        <div id="featured">
+            <div id="threecards">
+                <div class="confcard">
+                    <div  class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/photography.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/cinema.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/art.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div class="confcard textconf">
+                    <p>Upcoming</p>
+                    <p>The University Arts League Performing</p>
+                    <p>Topic:</p>
+                    <p>Date:</p>
+                    <p>Venue:</p>
+                </div>
+                <div class="confcard">
+                    <div  class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/event.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="C:\Users\Josué\Desktop\RALI\images/archives.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>       
+        </div>
+
+        <h4 class="h4" style="text-decoration:underline;padding-left: 10px;">Human Capital Development</h4> 
+                <!--ligne des trois cartes concernant le développement humain-->
+        <div id="featured">
+            <div id="threecards">
+                <div class="confcard">
+                    <img src="C:\Users\Josué\Desktop\RALI\images/films.jpg" alt="films">
+                </div>
+                <div class="confcard textconf">
+                    <p>The Women Education  Tertiary Project</p>
+                    <p>Lorem ipsum dol lorem ipsum doloror</p>
+                    <p class="sub-title">Lorem ipsum dolor</p>
+    
+                </div>
+                <div class="confcard">
+                    <div class="container">
+                        <img src="C:\Users\Josué\Desktop\RALI\images/vulnerable.jpg" alt="vulnerable" >
+                      </div>
+                </div>
+            </div>       
+        </div>
+
+        <h4 class="h4" style="text-decoration:underline;padding-left: 10px;">What Our Learners Say?</h4>
+        <!--carousel présentant les témoignages-->
+        <div id="flex">
+            <div class="flexchild">
+                <div style="margin-top: 2px; margin-left: 2px;">
+                    <img src="DSC_3881.jpg"  alt="..." style="border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; height: 150px; width: 150px;">
+                </div>
+                <div>
+                    <p style="padding: 5px;">RAL INSTITUTE provides the best English language training in the whole country with a method 
+                        of linguistic immersion and acquisition. After B1 in 2019, I again took part in ESPT 2020 level B2; the result
+                         is amazing. Today, I write and speak American English with a diction close to that of natives, a great 
+                         mastery of grammar, vocabulary, idiomatic experiences.</p>
+                         <h6 style="float: right; padding: 5px;"><small >Marie-Josué HOUESSOU</small></h6>
+                </div>
+            </div>
+            <div class="flexchild">
+                <div style="margin-top: 2px; margin-left: 2px;">
+                    <img src="C:\Users\Josué\Desktop\RALI\images/pasteureuloge.jpeg"  alt="..." style="border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; height: 150px; width: 150px;">
+                </div>
+                <div>
+                    <p style="padding: 5px;">I had a unique and effective experience of learning at B2 level
+                        this year because in just 6 weeks, my ability to communicate in English improved with an accent very close 
+                        to that of the native American. Also, the reinforcement in vocabulary and grammar is a great asset for my 
+                        professional development as a pastor because it greatly facilitates communication with the Central Office in Pasadena,
+                         California, USA. <br> Experience it and you will tell me about it.</p>
+                         <h6 style="float: right; padding: 5px;"><small>Euloge Hermas TCHABY</small></h6>
+                </div>
+            </div>
+              
+        </div>
+
+        </div> <br> 
+       
+        </div>
+
+
+    </div>
+    <div class="social" >
+        <ul class="wrapper">
+            <li class="icon facebook">
+                <span class="tooltip" id="face">Facebook</span>
+                <a href="https://web.facebook.com/"><span><i class="fa fa-facebook"></i>
+                </span></a>
+            </li>
+            <li class="icon twitter">
+                <span class="tooltip" id="twit">Twitter</span>
+                <a href="https://twitter.com/?lang=fr"><span><i class="fa fa-twitter"></i>
+                </span></a>
+            </li>
+            <li class="icon instagram">
+                <span class="tooltip" id="insta">Instagram</span>
+                <a href="https://www.instagram.com/?hl=fr"><span><i class="fa fa-instagram"></i>
+                </span></a>
+            </li>
+            <li class="icon youtube">
+                <span class="tooltip" id="yout">Youtube</span>
+                <a href="https://www.youtube.com/"><span><i class="fa fa-youtube"></i>
+                </span></a>
+            </li>
+            <li class="icon whatsapp">
+                <span class="tooltip" id="what">Whatsapp</span>
+                <a href=""><span><i class="fa fa-whatsapp"></i>
+                </span></a>
+            </li>
+        </ul>
+        <div><button class="button button5"><a target="_self" id="signup" href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/signup.html">Sign up</a></button>
+        </div>
+    </div>
+    <div id="footer">
+        <ul class="footer-menu">
+            <li class="liste"><a href="file:///C:/Users/Josu%C3%A9/Desktop/RALI/privacypolicy.html">Privacy Policy</a></li>
+            <li class="liste"><a href="">Terms & Conditions</a></li>
+            <li class="liste">About Us </li>
+            <li class="liste">About Us </li>
+            <li class="liste">About Us </li>
+            <li class="liste">About Us </li>
+            <li class="liste">About Us </li>
+        </ul>
+    </div>
+
+    
+
+        
+
+
+    
+    
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ </body>
+ </html>
